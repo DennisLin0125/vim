@@ -15,6 +15,7 @@ set splitbelow
 set splitright
 set incsearch
 set linebreak
+set noshowmode
 
 " color
 syntax on
@@ -28,5 +29,6 @@ filetype plugin on
 " plugin
 call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 inoremap jj <Esc>
