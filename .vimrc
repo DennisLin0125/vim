@@ -22,7 +22,8 @@ set linebreak
 set noshowmode
 set showcmd
 set scrolloff=3
-
+set history=100
+set ai
 
 
 " color
@@ -79,3 +80,12 @@ autocmd FileType html,css,scss,less imap <expr> <tab> emmet#expandAbbrIntelligen
 
 inoremap jj <Esc>
 nnoremap <silent> <F2> :NERDTreeToggle<Enter>
+inoremap ( ()<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
+inoremap [ []<Esc>i
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap {{ {}<ESC>i
+
+
+
