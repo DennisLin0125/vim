@@ -25,5 +25,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
-
+" plugin
+call plug#begin('~/.vim/plugged')
+Plug 'ap/vim-css-color'
+call plug#end()
 inoremap jj <Esc>
