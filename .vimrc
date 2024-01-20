@@ -41,9 +41,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'powerline/powerline'
 Plug 'powerline/fonts'
 Plug 'wakatime/vim-wakatime'
+Plug 'preservim/nerdtree'
 call plug#end()
 
+nnoremap <silent> <F2> :NERDTreeToggle<Enter>
+let NERDTreeMinimalUI = 1
 
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 
 inoremap jj <Esc>
