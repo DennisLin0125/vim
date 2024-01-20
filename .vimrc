@@ -1,3 +1,7 @@
+" let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+
 set nu
 set clipboard=unnamed
 set hlsearch
@@ -16,6 +20,10 @@ set splitright
 set incsearch
 set linebreak
 set noshowmode
+set showcmd
+
+
+
 
 " color
 syntax on
@@ -30,5 +38,12 @@ filetype plugin on
 call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
+Plug 'powerline/powerline'
+Plug 'powerline/fonts'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
+
+
+
+
 inoremap jj <Esc>
