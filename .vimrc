@@ -28,7 +28,10 @@ set ai
 
 " color
 syntax on
-colorscheme darkblue
+"colorscheme darkblue
+"colorscheme wombat256mod
+"colorscheme molokai
+colorscheme gruvbox
 
 " filetype
 filetype on
