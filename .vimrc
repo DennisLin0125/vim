@@ -21,7 +21,7 @@ set incsearch
 set linebreak
 set noshowmode
 set showcmd
-
+set scrolloff=3
 
 
 
@@ -42,13 +42,23 @@ Plug 'powerline/powerline'
 Plug 'powerline/fonts'
 Plug 'wakatime/vim-wakatime'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
-nnoremap <silent> <F2> :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 inoremap jj <Esc>
+nnoremap <silent> <F2> :NERDTreeToggle<Enter>
