@@ -44,6 +44,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 let NERDTreeMinimalUI = 1
@@ -58,7 +60,9 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,scss,less EmmetInstall
+autocmd FileType html,css,scss,less imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 inoremap jj <Esc>
 nnoremap <silent> <F2> :NERDTreeToggle<Enter>
