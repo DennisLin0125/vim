@@ -48,6 +48,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ggreer/the_silver_searcher'
 Plug 'tomtom/tcomment_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 let NERDTreeMinimalUI = 1
